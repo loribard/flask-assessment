@@ -1,0 +1,70 @@
+body {
+	background-color: lightblue;
+	
+
+}
+input {
+	background-color: yellow;
+	width:300px;
+	height:25px;
+	
+
+}
+.dropdown {
+	background-color: yellow;
+	width:300px;
+	height:35px;
+	
+
+}
+
+h1 {
+	text-align: center;
+	color:#000080;
+}
+
+h2 {
+	color:#000080;
+	
+}
+
+h3 {
+	font-size: 1.5em;
+	color:#000080;
+	
+	text-align:center;
+
+}
+form {
+	width:800px;
+	height:100px;
+	margin:left;
+	
+}
+option {
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+
+#search {
+	width:150px;
+	height:30px;
+	font-weight: bold;
+	
+}
+
+#formfillingout {
+	color:#404040;
+	font-size:30px;
+}
+
+#p01 {
+	font-weight: bolder;
+
+}
+
+.boxed {
+	border:2px dotted black;
+}
+
