@@ -1,15 +1,9 @@
-<!doctype html>
-<html>
-<head>
-	
-	<link rel="stylesheet" href="/static/styles.css">
-    <title>Application Response</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block body %}
 <h3>
 
 Thank you, {{firstname}} {{lastname}}, for applying to be a {{typeofjob}}. Your minimum salary requirement is {{quantity}} dollars.
 <!-- fill this in -->
 </h3>
-</body>
-</html>
+{% endblock %}

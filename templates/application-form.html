@@ -1,50 +1,39 @@
-<!-- Making an html form for a job application. -->
-<!doctype html>
- <html>
-    <head>
-    <!-- linking to the css file -->
-    <link rel="stylesheet" href="/static/styles.css">
+{% extends 'base.html' %}
 
-    <title> New Job</title>
-    </head>
+{% block body %}
+<h1> Application Form </h1>
+    <!-- Box in the following div class in order to put a border around it -->
+    <div class="boxed">
+    <h3> Thanks for applying. Please fill in the form and click the "Submit" button.
+    We'll get back with you soon.
+    </h3>
+    </div><br>
+    <!-- Now the form begins -->
+    <div id="formfillingout">
+    <form action="/application" method="POST">  
 
-    <body>
-        <h1> Application Form </h1>
-        <div class="boxed">
-        <h3> Thanks for applying. Please fill in the form and click the "Submit" button.
-        We'll get back with you soon.
-        </h3>
-        </div>
-        <div id="formfillingout">
-        <br>
-        
-        <form action="/application" method="POST">
-         
-            <label>First Name: 
-                <input type="text" name="firstname"></input><br>
-            </label>
-            <label id="p01">Last Name: 
-                <input type="text" name="lastname" ></input><br>
-            </label>
-            <label>Salary Requirements: $ 
-              <input type="text" name="quantity"></input><br>
-            </label>
+        <label>First Name: 
+        <input type="text" name="firstname"></input><br>
+        </label>
 
-            <label>Job Desired
-                <select name="typeofjob" class="dropdown">
-                    <option value="Software Engineer">Software Engineer</option>
-                    <option value= "QA Engineer">QA Engineer</option>
-                    <option value="Product Manager">Product Manager</option>
-                </select><br>
-            </label>
+        <label id="p01">Last Name: 
+        <input type="text" name="lastname" ></input><br>
+        </label>
 
-            <label><input type="Submit" id="search">
-            </label>
+        <label>Salary Requirements: $ 
+        <input type="text" name="quantity"></input><br>
+        </label>
 
-            
-        </form>
-        
-        </h3>
-        </div>
-    </body>
- </html>
+        <label>Job Desired
+            <select name="typeofjob" class="dropdown">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value= "QA Engineer">QA Engineer</option>
+                <option value="Product Manager">Product Manager</option>
+            </select><br>
+        </label>
+
+        <label><input type="Submit" id="search">
+        </label>
+    </form>
+    </div>
+{% endblock %}

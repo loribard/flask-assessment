@@ -10,7 +10,7 @@ app.secret_key = "ABC"
 
 @app.route("/")
 def index_page():
-    """Show an index page."""
+    """Show our first page which is an application form."""
 
     return render_template("application-form.html")
 
@@ -21,17 +21,16 @@ def index_page():
 
 @app.route("/application", methods=['POST'])
 def greeting():
+    """taking the input from the form and rendering it
+
+    rendering to the application-response.html form
+    """
+
     firstname = request.form.get('firstname')
     lastname = request.form.get('lastname')
     quantity = request.form.get('quantity')
     typeofjob = request.form.get('typeofjob')
    
-
-    
-
-
-    
-
     return render_template("application-response.html",firstname=firstname
         ,lastname=lastname,quantity=quantity,typeofjob=typeofjob)
 
